@@ -1,0 +1,19 @@
+{% extends "./main.html"%}
+
+{% block content %}
+    <h1> Room Page..</h1>
+    <div>
+       <h1>{{ room.Name }} {{ room.topic }} {{ room.host }}</h1>
+    </div>
+
+    <h1> Messages </h1>
+    <div>
+        <ul>
+        {% for message in messages %}
+        <li> {{ message.body}} -> {{ message.user }} </li>
+        
+        {% endfor %}
+        </ul>
+    </div>
+
+{% endblock content %}
